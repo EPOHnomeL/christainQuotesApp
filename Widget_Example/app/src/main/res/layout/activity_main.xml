@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/twQuote"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="@dimen/cardview_default_elevation"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/cardview_default_elevation"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:text="Hello World!"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:scrollbars = "vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnPreviousQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/previous_quote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twQuote" />
+
+    <Button
+        android:id="@+id/btnNextQuote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/next_quote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twQuote" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:contentDescription="@string/press_me"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:clickable="true"
+        android:contentDescription="@android:string/copy"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/twQuote"
+        app:layout_constraintEnd_toEndOf="@+id/twQuote"
+        app:srcCompat="?attr/actionModeCopyDrawable" />
+
+    <CheckBox
+        android:id="@+id/chbFavourite"
+        android:layout_width="31dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:button="@android:drawable/star_off"
+        android:textSize="0sp"
+        app:layout_constraintBottom_toBottomOf="@+id/twQuote"
+        app:layout_constraintEnd_toStartOf="@+id/btnCopy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
